@@ -15,4 +15,3 @@ $attachment = New-Object System.Net.Mail.Attachment –ArgumentList $env:TEMP\kz
 $ReportEmail.Attachments.Add($attachment)
 $SMTPInfo.Send($ReportEmail)
 }
-write-host "yay"
