@@ -11,7 +11,7 @@ $files=Get-ChildItem "$env:TEMP\kzldj"
 Foreach($file in $files)
 {
 Write-Host “Attaching File :- ” $file
-$attachment = New-Object System.Net.Mail.Attachment –ArgumentList C:\l\$file
+$attachment = New-Object System.Net.Mail.Attachment –ArgumentList $env:TEMP\kzldj\$file
 $ReportEmail.Attachments.Add($attachment)
 $SMTPInfo.Send($ReportEmail)
 }
